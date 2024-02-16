@@ -6,15 +6,17 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "CommonJS", // Cambiado de "esnext" a "CommonJS" para compatibilidad con Node.js
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "rootDir": "./node_actions",
+    "outDir": "./dist",
+    "noEmit": false // Cambiado de true a false para permitir la generación de archivos .js
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["node_actions/**/*.ts"],
+  "exclude": ["node_modules", "dist"] // Agregado "dist" al exclude para evitar intentos de compilación de los archivos de salida
 }
