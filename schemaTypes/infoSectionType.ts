@@ -7,8 +7,8 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'icons',
-      title: 'Icons',
+      name: 'iconTitle',
+      title: 'Icon Title',
       type: 'reference',
       to: [{type: 'icons'}],
     }),
