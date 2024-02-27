@@ -15,7 +15,7 @@ export const headerType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'jobDescHeadeer',
+      name: 'jobDescHeader',
       title: 'Job Desc Header',
       type: 'string',
       description: 'Please enter the Job Desc',
