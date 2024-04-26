@@ -1,7 +1,8 @@
+import {googleMapsInput} from '@sanity/google-maps-input'
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
+import {media, mediaAssetSource} from 'sanity-plugin-media'
 import {structureTool} from 'sanity/structure'
-//import {googleMapsInput} from '@sanity/google-maps-input'
 import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
@@ -14,8 +15,18 @@ export default defineConfig({
   plugins: [
     structureTool(),
     visionTool(),
-    //googleMapsInput(),
+    googleMapsInput({apiKey: 'AIzaSyAonIv-ghR1EfbyhlksRITt886sp4t_DWU'}),
+    media(),
   ],
+
+  form: {
+    // Don't use this plugin when selecting files only (but allow all other enabled asset sources)
+    file: {
+      assetSources: (previousAssetSources) => {
+        return previousAssetSources.filter((assetSource) => assetSource !== mediaAssetSource)
+      },
+    },
+  },
 
   schema: {
     types: schemaTypes,

@@ -18,12 +18,14 @@
   ],
   "dependencies": {
     "@sanity/client": "^6.13.3",
+    "@sanity/google-maps-input": "^4.0.1",
     "@sanity/vision": "^3.29.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.11.0",
     "react-is": "^18.2.0",
-    "sanity": "^3.29.1",
+    "sanity": "^3.39.0",
+    "sanity-plugin-media": "^2.2.5",
     "styled-components": "^6.0.7"
   },
   "devDependencies": {
