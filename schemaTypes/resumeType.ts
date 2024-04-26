@@ -38,6 +38,11 @@ export const resumeType = defineType({
           type: 'infoSection',
           validation: (Rule) => Rule.required(),
         }),
+        defineArrayMember({
+          name: 'sliderSection',
+          type: 'sliderSection',
+          validation: (Rule) => Rule.required(),
+        }),
       ],
     }),
     defineField({

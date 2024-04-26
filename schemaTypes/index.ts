@@ -6,11 +6,17 @@ import icons from './icons'
 import infoItemType from './infoItemType'
 import infoSectionType from './infoSectionType'
 import {resumeType} from './resumeType'
+import slide from './slide'
+import slideGallery from './slideGalleryType'
+import sliders from './sliders'
+import sliderSection from './sliderSectionType'
 
 export const schemaTypes = [
   // Document types
   resumeType,
   contactDetailType,
+  sliders,
+  slide,
   icons,
 
   // Other types
@@ -19,4 +25,6 @@ export const schemaTypes = [
   infoSectionType,
   infoItemType,
   iconGallery,
+  slideGallery,
+  sliderSection,
 ]
