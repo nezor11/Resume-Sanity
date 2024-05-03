@@ -29,6 +29,20 @@ export default defineType({
         ],
         layout: 'radio',
       },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'type',
+      title: 'Type of work',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Fresh', value: 'fresh'},
+          {title: 'Maintenance', value: 'maintenance'},
+        ],
+        layout: 'radio',
+      },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'infoUrl',
@@ -41,11 +55,13 @@ export default defineType({
       name: 'workDate',
       title: 'Work date',
       type: 'datetime',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slideTitle',
       title: 'Slide Title',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slideImage',
@@ -92,6 +108,13 @@ export default defineType({
         ],
         layout: 'grid',
       },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'icons',
+      title: 'Icons',
+      type: 'array',
+      of: [{type: 'iconGallery'}],
     }),
     defineField({
       name: 'images',
