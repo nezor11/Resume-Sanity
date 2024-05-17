@@ -92,9 +92,10 @@ export default defineType({
       ],
       options: {
         list: [
-          {title: 'Front-end Development', value: 'front_end'},
-          {title: 'Front-end Frameworks', value: 'front_end_frameworks'},
-          {title: 'Back-end Development', value: 'back_end'},
+          {title: 'Frontend Development', value: 'front_end'},
+          {title: 'Frontend Frameworks', value: 'front_end_frameworks'},
+          {title: 'Backend Development', value: 'back_end_frameworks'},
+          {title: 'Backend Frameworks', value: 'back_end'},
           {title: 'Servers and Hosting', value: 'servers_hosting'},
           {title: 'Testing and Debugging', value: 'testing_debugging'},
           {title: 'Security', value: 'security'},
@@ -115,6 +116,11 @@ export default defineType({
       title: 'Icons',
       type: 'array',
       of: [{type: 'iconGallery'}],
+    }),
+    defineField({
+      name: 'videoUrl',
+      title: 'Video Url',
+      type: 'string',
     }),
     defineField({
       name: 'images',
