@@ -118,6 +118,11 @@ export default defineType({
       of: [{type: 'iconGallery'}],
     }),
     defineField({
+      name: 'backgroundColor',
+      title: 'BackgroundColor Slide',
+      type: 'string',
+    }),
+    defineField({
       name: 'videoUrl',
       title: 'Video Url',
       type: 'string',
